@@ -1,0 +1,41 @@
+Name,Y,X,Type,Risk,HumanitarianAid
+Beit Hanoun,31.538483,34.53677,Civilians,8.5,1
+Beit Lahia,31.551289,34.509222,Civilians,8.5,1
+Jabalia,31.529396,34.479741,Civilians,8.5,1
+Atatra,31.5596,34.48741,Civilians,9,1
+Al-Shati,31.537392,34.453669,Civilians,8.5,1
+Rimal,31.530712,34.455676,Civilians,10,1
+Tuffah neighborhood park,31.5124502,34.4760425,Civilians,8,1
+Shuja'iyya,31.5009022,34.4705065,Civilians,9,0
+Zeitoun,31.5174283,34.4496182,Civilians,8,1
+Sabra,31.508562,34.4555336,Civilians,9,1
+Sheikh Radwan,31.536022,34.465442,Civilians,8.5,1
+Nuseirat,31.449967,34.392909,Civilians,6.5,4
+Bureij,31.438786,34.40239,Civilians,6,4
+Maghazi,31.421807,34.385416,Civilians,5,4
+Az Zawayda,31.429763,34.370742,Civilians,5.5,4
+Deir al Balah,31.417139,34.350931,Civilians,6,4
+Al Musaddar,31.415921,34.375304,Civilians,5.5,4
+Abasan al-Kabira,31.323126,34.344025,Civilians,8,3
+Abasan al-Saghira,31.339709,34.346633,Civilians,9,3
+Bani Suheila,31.342104,34.325254,Civilians,9,3
+Khuza'a,31.307022,34.360047,Civilians,10,5
+Al Qarara,31.371312,34.33526,Civilians,8.5,3
+Al Fukhkhari,31.295228,34.333152,Civilians,7,5
+Rafah Camp,31.2841841,34.2546633,Civilians,10,5
+Tal as Sultan,31.309274,34.241436,Civilians,9.5,5
+مستشفى شهداء الاقصى,31.4203018,34.3597137,Destination,2,4
+مستشفي الخير,31.3543928,34.2811077,Civilians,9,3
+Gaza field hospital of the Jordanian-,31.5069568,34.4393919,Destination,2,1
+مستشفى الشفا - مبنى الحروق,31.5245715,34.4445262,Destination,3,1
+مدرسة الفاخورة,31.5422251,34.4951591,Civilians,8.5,1
+UNRWA vocational college,31.363653,34.295552,Destination,3,3
+UNRWA-GFO,31.4704866,34.4060662,Destination,3.5,2
+Al Quds Open University - Gaza Branch,31.5337295,34.454333,Destination,4,1
+جامعة الازهر كلية الحقوق المغراقة,31.4782711,34.4268139,Destination,3.5,2
+Islamic University - khanyonuis,31.3232228,34.3214134,Destination,4,3
+north gaza int,31.428897166666665,34.379615333333334,Intersection,5.5,0
+gaza city int,31.54789928,34.50714028,Intersection,7.8,0
+middle camps int,31.329750166666667,34.3407285,Intersection,7,0
+khan younes int ,31.3159503,34.259069,Intersection,9,0
+Rafah int ,31.52160809,34.4632786,Intersection,10,0

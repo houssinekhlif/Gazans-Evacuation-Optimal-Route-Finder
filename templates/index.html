@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safe Route Finder</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🟢 Gaza Safe Path Recommender</h1>
+
+    <label>Your Location:</label>
+    <select id="locationSelect"></select>
+
+    <label>Your Situation (Scenario):</label>
+    <select id="scenarioSelect">
+        <option value="risk">Avoid Danger (High Risk Avoidance)</option>
+        <option value="aid">Need Humanitarian Aid (Injured)</option>
+        <option value="distance">Shortest Distance (If In a Vehicle)</option>
+    </select>
+
+    <button onclick="computePath()">Find Best Destinations</button>
+
+    <h2>Top 3 Recommended Destinations</h2>
+    <div id="results"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

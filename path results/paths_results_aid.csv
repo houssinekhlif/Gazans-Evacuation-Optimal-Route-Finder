@@ -1,0 +1,217 @@
+scenario,source,target,path,cost,algorithm,note
+aid,Beit Hanoun,مستشفى شهداء الاقصى,,,,no path
+aid,Beit Hanoun,Gaza field hospital of the Jordanian-,"['Beit Hanoun', 'Al Quds Open University - Gaza Branch', 'Zeitoun', 'Gaza field hospital of the Jordanian-']",8.77,dijkstra,ok
+aid,Beit Hanoun,مستشفى الشفا - مبنى الحروق,"['Beit Hanoun', 'Al Quds Open University - Gaza Branch', 'Al-Shati', 'مستشفى الشفا - مبنى الحروق']",8.579999999999998,dijkstra,ok
+aid,Beit Hanoun,UNRWA vocational college,,,,no path
+aid,Beit Hanoun,UNRWA-GFO,,,,no path
+aid,Beit Hanoun,Al Quds Open University - Gaza Branch,"['Beit Hanoun', 'Al Quds Open University - Gaza Branch']",3.7099999999999995,dijkstra,ok
+aid,Beit Hanoun,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Beit Hanoun,Islamic University - khanyonuis,,,,no path
+aid,Beit Lahia,مستشفى شهداء الاقصى,,,,no path
+aid,Beit Lahia,Gaza field hospital of the Jordanian-,"['Beit Lahia', 'Al Quds Open University - Gaza Branch', 'Zeitoun', 'Gaza field hospital of the Jordanian-']",8.389999999999999,dijkstra,ok
+aid,Beit Lahia,مستشفى الشفا - مبنى الحروق,"['Beit Lahia', 'Al Quds Open University - Gaza Branch', 'Al-Shati', 'مستشفى الشفا - مبنى الحروق']",8.2,dijkstra,ok
+aid,Beit Lahia,UNRWA vocational college,,,,no path
+aid,Beit Lahia,UNRWA-GFO,,,,no path
+aid,Beit Lahia,Al Quds Open University - Gaza Branch,"['Beit Lahia', 'Al Quds Open University - Gaza Branch']",3.3299999999999996,dijkstra,ok
+aid,Beit Lahia,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Beit Lahia,Islamic University - khanyonuis,,,,no path
+aid,Jabalia,مستشفى شهداء الاقصى,,,,no path
+aid,Jabalia,Gaza field hospital of the Jordanian-,"['Jabalia', 'Rafah int', 'Gaza field hospital of the Jordanian-']",6.539999999999999,dijkstra,ok
+aid,Jabalia,مستشفى الشفا - مبنى الحروق,"['Jabalia', 'Rafah int', 'مستشفى الشفا - مبنى الحروق']",6.399999999999999,dijkstra,ok
+aid,Jabalia,UNRWA vocational college,,,,no path
+aid,Jabalia,UNRWA-GFO,,,,no path
+aid,Jabalia,Al Quds Open University - Gaza Branch,"['Jabalia', 'Al Quds Open University - Gaza Branch']",2.76,dijkstra,ok
+aid,Jabalia,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Jabalia,Islamic University - khanyonuis,,,,no path
+aid,Atatra,مستشفى شهداء الاقصى,,,,no path
+aid,Atatra,Gaza field hospital of the Jordanian-,"['Atatra', 'مستشفى الشفا - مبنى الحروق', 'Zeitoun', 'Gaza field hospital of the Jordanian-']",7.949999999999999,dijkstra,ok
+aid,Atatra,مستشفى الشفا - مبنى الحروق,"['Atatra', 'مستشفى الشفا - مبنى الحروق']",3.1799999999999997,dijkstra,ok
+aid,Atatra,UNRWA vocational college,,,,no path
+aid,Atatra,UNRWA-GFO,,,,no path
+aid,Atatra,Al Quds Open University - Gaza Branch,"['Atatra', 'Al Quds Open University - Gaza Branch']",3.0699999999999994,dijkstra,ok
+aid,Atatra,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Atatra,Islamic University - khanyonuis,,,,no path
+aid,Al-Shati,مستشفى شهداء الاقصى,,,,no path
+aid,Al-Shati,Gaza field hospital of the Jordanian-,"['Al-Shati', 'Rafah int', 'Gaza field hospital of the Jordanian-']",6.56,dijkstra,ok
+aid,Al-Shati,مستشفى الشفا - مبنى الحروق,"['Al-Shati', 'مستشفى الشفا - مبنى الحروق']",2.4999999999999996,dijkstra,ok
+aid,Al-Shati,UNRWA vocational college,,,,no path
+aid,Al-Shati,UNRWA-GFO,,,,no path
+aid,Al-Shati,Al Quds Open University - Gaza Branch,"['Al-Shati', 'Al Quds Open University - Gaza Branch']",2.3699999999999997,dijkstra,ok
+aid,Al-Shati,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Al-Shati,Islamic University - khanyonuis,,,,no path
+aid,Rimal,مستشفى شهداء الاقصى,,,,no path
+aid,Rimal,Gaza field hospital of the Jordanian-,"['Rimal', 'Gaza field hospital of the Jordanian-']",2.8099999999999996,dijkstra,ok
+aid,Rimal,مستشفى الشفا - مبنى الحروق,"['Rimal', 'مستشفى الشفا - مبنى الحروق']",2.5299999999999994,dijkstra,ok
+aid,Rimal,UNRWA vocational college,,,,no path
+aid,Rimal,UNRWA-GFO,,,,no path
+aid,Rimal,Al Quds Open University - Gaza Branch,"['Rimal', 'Al Quds Open University - Gaza Branch']",2.4799999999999995,dijkstra,ok
+aid,Rimal,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Rimal,Islamic University - khanyonuis,,,,no path
+aid,Tuffah neighborhood park,مستشفى شهداء الاقصى,,,,no path
+aid,Tuffah neighborhood park,Gaza field hospital of the Jordanian-,"['Tuffah neighborhood park', 'Rafah int', 'Gaza field hospital of the Jordanian-']",6.47,dijkstra,ok
+aid,Tuffah neighborhood park,مستشفى الشفا - مبنى الحروق,"['Tuffah neighborhood park', 'مستشفى الشفا - مبنى الحروق']",2.7699999999999996,dijkstra,ok
+aid,Tuffah neighborhood park,UNRWA vocational college,,,,no path
+aid,Tuffah neighborhood park,UNRWA-GFO,,,,no path
+aid,Tuffah neighborhood park,Al Quds Open University - Gaza Branch,"['Tuffah neighborhood park', 'Al Quds Open University - Gaza Branch']",2.7899999999999996,dijkstra,ok
+aid,Tuffah neighborhood park,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Tuffah neighborhood park,Islamic University - khanyonuis,,,,no path
+aid,Shuja'iyya,مستشفى شهداء الاقصى,,,,no path
+aid,Shuja'iyya,Gaza field hospital of the Jordanian-,"[""Shuja'iyya"", 'Gaza field hospital of the Jordanian-']",3.1199999999999997,dijkstra,ok
+aid,Shuja'iyya,مستشفى الشفا - مبنى الحروق,"[""Shuja'iyya"", 'مستشفى الشفا - مبنى الحروق']",3.17,dijkstra,ok
+aid,Shuja'iyya,UNRWA vocational college,,,,no path
+aid,Shuja'iyya,UNRWA-GFO,,,,no path
+aid,Shuja'iyya,Al Quds Open University - Gaza Branch,"[""Shuja'iyya"", 'Rafah int', 'Al Quds Open University - Gaza Branch']",6.8999999999999995,dijkstra,ok
+aid,Shuja'iyya,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Shuja'iyya,Islamic University - khanyonuis,,,,no path
+aid,Zeitoun,مستشفى شهداء الاقصى,,,,no path
+aid,Zeitoun,Gaza field hospital of the Jordanian-,"['Zeitoun', 'Gaza field hospital of the Jordanian-']",2.4199999999999995,dijkstra,ok
+aid,Zeitoun,مستشفى الشفا - مبنى الحروق,"['Zeitoun', 'مستشفى الشفا - مبنى الحروق']",2.3499999999999996,dijkstra,ok
+aid,Zeitoun,UNRWA vocational college,,,,no path
+aid,Zeitoun,UNRWA-GFO,,,,no path
+aid,Zeitoun,Al Quds Open University - Gaza Branch,"['Zeitoun', 'Al Quds Open University - Gaza Branch']",2.6399999999999997,dijkstra,ok
+aid,Zeitoun,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Zeitoun,Islamic University - khanyonuis,,,,no path
+aid,Sabra,مستشفى شهداء الاقصى,,,,no path
+aid,Sabra,Gaza field hospital of the Jordanian-,"['Sabra', 'Gaza field hospital of the Jordanian-']",2.4999999999999996,dijkstra,ok
+aid,Sabra,مستشفى الشفا - مبنى الحروق,"['Sabra', 'مستشفى الشفا - مبنى الحروق']",2.6199999999999997,dijkstra,ok
+aid,Sabra,UNRWA vocational college,,,,no path
+aid,Sabra,UNRWA-GFO,,,,no path
+aid,Sabra,Al Quds Open University - Gaza Branch,"['Sabra', 'Al Quds Open University - Gaza Branch']",2.8899999999999997,dijkstra,ok
+aid,Sabra,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Sabra,Islamic University - khanyonuis,,,,no path
+aid,Sheikh Radwan,مستشفى شهداء الاقصى,,,,no path
+aid,Sheikh Radwan,Gaza field hospital of the Jordanian-,"['Sheikh Radwan', 'Rafah int', 'Gaza field hospital of the Jordanian-']",6.51,dijkstra,ok
+aid,Sheikh Radwan,مستشفى الشفا - مبنى الحروق,"['Sheikh Radwan', 'مستشفى الشفا - مبنى الحروق']",2.6299999999999994,dijkstra,ok
+aid,Sheikh Radwan,UNRWA vocational college,,,,no path
+aid,Sheikh Radwan,UNRWA-GFO,,,,no path
+aid,Sheikh Radwan,Al Quds Open University - Gaza Branch,"['Sheikh Radwan', 'Al Quds Open University - Gaza Branch']",2.5199999999999996,dijkstra,ok
+aid,Sheikh Radwan,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,Sheikh Radwan,Islamic University - khanyonuis,,,,no path
+aid,Nuseirat,مستشفى شهداء الاقصى,"['Nuseirat', 'UNRWA-GFO', 'Bureij', 'مستشفى شهداء الاقصى']",3.389999999999999,dijkstra,ok
+aid,Nuseirat,Gaza field hospital of the Jordanian-,,,,no path
+aid,Nuseirat,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Nuseirat,UNRWA vocational college,"['Nuseirat', 'UNRWA-GFO', 'Bureij', 'مستشفى شهداء الاقصى', 'Al Qarara', 'UNRWA vocational college']",6.4499999999999975,dijkstra,ok
+aid,Nuseirat,UNRWA-GFO,"['Nuseirat', 'UNRWA-GFO']",1.2199999999999998,dijkstra,ok
+aid,Nuseirat,Al Quds Open University - Gaza Branch,,,,no path
+aid,Nuseirat,جامعة الازهر كلية الحقوق المغراقة,"['Nuseirat', 'UNRWA-GFO', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",4.199999999999999,dijkstra,ok
+aid,Nuseirat,Islamic University - khanyonuis,"['Nuseirat', 'UNRWA-GFO', 'Bureij', 'مستشفى شهداء الاقصى', 'Al Qarara', 'Islamic University - khanyonuis']",6.669999999999998,dijkstra,ok
+aid,Bureij,مستشفى شهداء الاقصى,"['Bureij', 'مستشفى شهداء الاقصى']",0.7499999999999996,dijkstra,ok
+aid,Bureij,Gaza field hospital of the Jordanian-,,,,no path
+aid,Bureij,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Bureij,UNRWA vocational college,"['Bureij', 'مستشفى شهداء الاقصى', 'Al Qarara', 'UNRWA vocational college']",3.8099999999999987,dijkstra,ok
+aid,Bureij,UNRWA-GFO,"['Bureij', 'UNRWA-GFO']",1.4199999999999995,dijkstra,ok
+aid,Bureij,Al Quds Open University - Gaza Branch,,,,no path
+aid,Bureij,جامعة الازهر كلية الحقوق المغراقة,"['Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",1.5599999999999996,dijkstra,ok
+aid,Bureij,Islamic University - khanyonuis,"['Bureij', 'مستشفى شهداء الاقصى', 'Al Qarara', 'Islamic University - khanyonuis']",4.0299999999999985,dijkstra,ok
+aid,Maghazi,مستشفى شهداء الاقصى,"['Maghazi', 'مستشفى شهداء الاقصى']",0.3099999999999996,dijkstra,ok
+aid,Maghazi,Gaza field hospital of the Jordanian-,,,,no path
+aid,Maghazi,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Maghazi,UNRWA vocational college,"['Maghazi', 'مستشفى شهداء الاقصى', 'Al Qarara', 'UNRWA vocational college']",3.3699999999999988,dijkstra,ok
+aid,Maghazi,UNRWA-GFO,"['Maghazi', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",2.4799999999999986,dijkstra,ok
+aid,Maghazi,Al Quds Open University - Gaza Branch,,,,no path
+aid,Maghazi,جامعة الازهر كلية الحقوق المغراقة,"['Maghazi', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",2.6199999999999988,dijkstra,ok
+aid,Maghazi,Islamic University - khanyonuis,"['Maghazi', 'مستشفى شهداء الاقصى', 'Al Qarara', 'Islamic University - khanyonuis']",3.589999999999999,dijkstra,ok
+aid,Az Zawayda,مستشفى شهداء الاقصى,"['Az Zawayda', 'مستشفى شهداء الاقصى']",0.12999999999999967,dijkstra,ok
+aid,Az Zawayda,Gaza field hospital of the Jordanian-,,,,no path
+aid,Az Zawayda,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Az Zawayda,UNRWA vocational college,"['Az Zawayda', 'مستشفى شهداء الاقصى', 'Al Qarara', 'UNRWA vocational college']",3.1899999999999986,dijkstra,ok
+aid,Az Zawayda,UNRWA-GFO,"['Az Zawayda', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",2.299999999999999,dijkstra,ok
+aid,Az Zawayda,Al Quds Open University - Gaza Branch,,,,no path
+aid,Az Zawayda,جامعة الازهر كلية الحقوق المغراقة,"['Az Zawayda', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",2.4399999999999986,dijkstra,ok
+aid,Az Zawayda,Islamic University - khanyonuis,"['Az Zawayda', 'مستشفى شهداء الاقصى', 'Al Qarara', 'Islamic University - khanyonuis']",3.409999999999999,dijkstra,ok
+aid,Deir al Balah,مستشفى شهداء الاقصى,"['Deir al Balah', 'مستشفى شهداء الاقصى']",0.009999999999999787,dijkstra,ok
+aid,Deir al Balah,Gaza field hospital of the Jordanian-,,,,no path
+aid,Deir al Balah,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Deir al Balah,UNRWA vocational college,"['Deir al Balah', 'مستشفى شهداء الاقصى', 'Al Qarara', 'UNRWA vocational college']",3.069999999999999,dijkstra,ok
+aid,Deir al Balah,UNRWA-GFO,"['Deir al Balah', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",2.179999999999999,dijkstra,ok
+aid,Deir al Balah,Al Quds Open University - Gaza Branch,,,,no path
+aid,Deir al Balah,جامعة الازهر كلية الحقوق المغراقة,"['Deir al Balah', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",2.319999999999999,dijkstra,ok
+aid,Deir al Balah,Islamic University - khanyonuis,"['Deir al Balah', 'مستشفى شهداء الاقصى', 'Al Qarara', 'Islamic University - khanyonuis']",3.289999999999999,dijkstra,ok
+aid,Al Musaddar,مستشفى شهداء الاقصى,"['Al Musaddar', 'مستشفى شهداء الاقصى']",0.22999999999999954,dijkstra,ok
+aid,Al Musaddar,Gaza field hospital of the Jordanian-,,,,no path
+aid,Al Musaddar,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Al Musaddar,UNRWA vocational college,"['Al Musaddar', 'مستشفى شهداء الاقصى', 'Al Qarara', 'UNRWA vocational college']",3.2899999999999987,dijkstra,ok
+aid,Al Musaddar,UNRWA-GFO,"['Al Musaddar', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",2.3999999999999986,dijkstra,ok
+aid,Al Musaddar,Al Quds Open University - Gaza Branch,,,,no path
+aid,Al Musaddar,جامعة الازهر كلية الحقوق المغراقة,"['Al Musaddar', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",2.5399999999999987,dijkstra,ok
+aid,Al Musaddar,Islamic University - khanyonuis,"['Al Musaddar', 'مستشفى شهداء الاقصى', 'Al Qarara', 'Islamic University - khanyonuis']",3.509999999999999,dijkstra,ok
+aid,Abasan al-Kabira,مستشفى شهداء الاقصى,"['Abasan al-Kabira', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى']",4.589999999999999,dijkstra,ok
+aid,Abasan al-Kabira,Gaza field hospital of the Jordanian-,,,,no path
+aid,Abasan al-Kabira,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Abasan al-Kabira,UNRWA vocational college,"['Abasan al-Kabira', 'Islamic University - khanyonuis', 'Al Qarara', 'UNRWA vocational college']",4.77,dijkstra,ok
+aid,Abasan al-Kabira,UNRWA-GFO,"['Abasan al-Kabira', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.759999999999998,dijkstra,ok
+aid,Abasan al-Kabira,Al Quds Open University - Gaza Branch,,,,no path
+aid,Abasan al-Kabira,جامعة الازهر كلية الحقوق المغراقة,"['Abasan al-Kabira', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",6.899999999999998,dijkstra,ok
+aid,Abasan al-Kabira,Islamic University - khanyonuis,"['Abasan al-Kabira', 'Islamic University - khanyonuis']",1.3099999999999996,dijkstra,ok
+aid,Abasan al-Saghira,مستشفى شهداء الاقصى,"['Abasan al-Saghira', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى']",4.799999999999999,dijkstra,ok
+aid,Abasan al-Saghira,Gaza field hospital of the Jordanian-,,,,no path
+aid,Abasan al-Saghira,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Abasan al-Saghira,UNRWA vocational college,"['Abasan al-Saghira', 'Islamic University - khanyonuis', 'Al Qarara', 'UNRWA vocational college']",4.979999999999999,dijkstra,ok
+aid,Abasan al-Saghira,UNRWA-GFO,"['Abasan al-Saghira', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.969999999999999,dijkstra,ok
+aid,Abasan al-Saghira,Al Quds Open University - Gaza Branch,,,,no path
+aid,Abasan al-Saghira,جامعة الازهر كلية الحقوق المغراقة,"['Abasan al-Saghira', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",7.1099999999999985,dijkstra,ok
+aid,Abasan al-Saghira,Islamic University - khanyonuis,"['Abasan al-Saghira', 'Islamic University - khanyonuis']",1.5199999999999996,dijkstra,ok
+aid,Bani Suheila,مستشفى شهداء الاقصى,"['Bani Suheila', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى']",4.5699999999999985,dijkstra,ok
+aid,Bani Suheila,Gaza field hospital of the Jordanian-,,,,no path
+aid,Bani Suheila,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Bani Suheila,UNRWA vocational college,"['Bani Suheila', 'Islamic University - khanyonuis', 'Al Qarara', 'UNRWA vocational college']",4.749999999999998,dijkstra,ok
+aid,Bani Suheila,UNRWA-GFO,"['Bani Suheila', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.739999999999998,dijkstra,ok
+aid,Bani Suheila,Al Quds Open University - Gaza Branch,,,,no path
+aid,Bani Suheila,جامعة الازهر كلية الحقوق المغراقة,"['Bani Suheila', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",6.879999999999998,dijkstra,ok
+aid,Bani Suheila,Islamic University - khanyonuis,"['Bani Suheila', 'Islamic University - khanyonuis']",1.2899999999999996,dijkstra,ok
+aid,Khuza'a,مستشفى شهداء الاقصى,"[""Khuza'a"", 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى']",4.369999999999999,dijkstra,ok
+aid,Khuza'a,Gaza field hospital of the Jordanian-,,,,no path
+aid,Khuza'a,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Khuza'a,UNRWA vocational college,"[""Khuza'a"", 'Islamic University - khanyonuis', 'Al Qarara', 'UNRWA vocational college']",4.549999999999999,dijkstra,ok
+aid,Khuza'a,UNRWA-GFO,"[""Khuza'a"", 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.539999999999999,dijkstra,ok
+aid,Khuza'a,Al Quds Open University - Gaza Branch,,,,no path
+aid,Khuza'a,جامعة الازهر كلية الحقوق المغراقة,"[""Khuza'a"", 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",6.679999999999999,dijkstra,ok
+aid,Khuza'a,Islamic University - khanyonuis,"[""Khuza'a"", 'Islamic University - khanyonuis']",1.0899999999999996,dijkstra,ok
+aid,Al Qarara,مستشفى شهداء الاقصى,"['Al Qarara', 'مستشفى شهداء الاقصى']",1.4399999999999995,dijkstra,ok
+aid,Al Qarara,Gaza field hospital of the Jordanian-,,,,no path
+aid,Al Qarara,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Al Qarara,UNRWA vocational college,"['Al Qarara', 'UNRWA vocational college']",1.6199999999999997,dijkstra,ok
+aid,Al Qarara,UNRWA-GFO,"['Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",3.6099999999999985,dijkstra,ok
+aid,Al Qarara,Al Quds Open University - Gaza Branch,,,,no path
+aid,Al Qarara,جامعة الازهر كلية الحقوق المغراقة,"['Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",3.7499999999999987,dijkstra,ok
+aid,Al Qarara,Islamic University - khanyonuis,"['Al Qarara', 'Islamic University - khanyonuis']",1.8399999999999996,dijkstra,ok
+aid,Al Fukhkhari,مستشفى شهداء الاقصى,"['Al Fukhkhari', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى']",3.9999999999999987,dijkstra,ok
+aid,Al Fukhkhari,Gaza field hospital of the Jordanian-,,,,no path
+aid,Al Fukhkhari,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Al Fukhkhari,UNRWA vocational college,"['Al Fukhkhari', 'Islamic University - khanyonuis', 'Al Qarara', 'UNRWA vocational college']",4.179999999999999,dijkstra,ok
+aid,Al Fukhkhari,UNRWA-GFO,"['Al Fukhkhari', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.169999999999998,dijkstra,ok
+aid,Al Fukhkhari,Al Quds Open University - Gaza Branch,,,,no path
+aid,Al Fukhkhari,جامعة الازهر كلية الحقوق المغراقة,"['Al Fukhkhari', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",6.309999999999998,dijkstra,ok
+aid,Al Fukhkhari,Islamic University - khanyonuis,"['Al Fukhkhari', 'Islamic University - khanyonuis']",0.7199999999999995,dijkstra,ok
+aid,Rafah Camp,مستشفى شهداء الاقصى,"['Rafah Camp', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى']",5.189999999999999,dijkstra,ok
+aid,Rafah Camp,Gaza field hospital of the Jordanian-,,,,no path
+aid,Rafah Camp,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Rafah Camp,UNRWA vocational college,"['Rafah Camp', 'Islamic University - khanyonuis', 'Al Qarara', 'UNRWA vocational college']",5.369999999999999,dijkstra,ok
+aid,Rafah Camp,UNRWA-GFO,"['Rafah Camp', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",7.359999999999998,dijkstra,ok
+aid,Rafah Camp,Al Quds Open University - Gaza Branch,,,,no path
+aid,Rafah Camp,جامعة الازهر كلية الحقوق المغراقة,"['Rafah Camp', 'Islamic University - khanyonuis', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",7.499999999999997,dijkstra,ok
+aid,Rafah Camp,Islamic University - khanyonuis,"['Rafah Camp', 'Islamic University - khanyonuis']",1.9099999999999997,dijkstra,ok
+aid,Tal as Sultan,مستشفى شهداء الاقصى,"['Tal as Sultan', 'UNRWA vocational college', 'Al Qarara', 'مستشفى شهداء الاقصى']",4.729999999999999,dijkstra,ok
+aid,Tal as Sultan,Gaza field hospital of the Jordanian-,,,,no path
+aid,Tal as Sultan,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,Tal as Sultan,UNRWA vocational college,"['Tal as Sultan', 'UNRWA vocational college']",1.6699999999999995,dijkstra,ok
+aid,Tal as Sultan,UNRWA-GFO,"['Tal as Sultan', 'UNRWA vocational college', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.899999999999999,dijkstra,ok
+aid,Tal as Sultan,Al Quds Open University - Gaza Branch,,,,no path
+aid,Tal as Sultan,جامعة الازهر كلية الحقوق المغراقة,"['Tal as Sultan', 'UNRWA vocational college', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",7.039999999999998,dijkstra,ok
+aid,Tal as Sultan,Islamic University - khanyonuis,"['Tal as Sultan', 'UNRWA vocational college', 'Al Qarara', 'Islamic University - khanyonuis']",5.129999999999999,dijkstra,ok
+aid,مستشفي الخير,مستشفى شهداء الاقصى,"['مستشفي الخير', 'UNRWA vocational college', 'Al Qarara', 'مستشفى شهداء الاقصى']",4.199999999999999,dijkstra,ok
+aid,مستشفي الخير,Gaza field hospital of the Jordanian-,,,,no path
+aid,مستشفي الخير,مستشفى الشفا - مبنى الحروق,,,,no path
+aid,مستشفي الخير,UNRWA vocational college,"['مستشفي الخير', 'UNRWA vocational college']",1.1399999999999997,dijkstra,ok
+aid,مستشفي الخير,UNRWA-GFO,"['مستشفي الخير', 'UNRWA vocational college', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'UNRWA-GFO']",6.369999999999999,dijkstra,ok
+aid,مستشفي الخير,Al Quds Open University - Gaza Branch,,,,no path
+aid,مستشفي الخير,جامعة الازهر كلية الحقوق المغراقة,"['مستشفي الخير', 'UNRWA vocational college', 'Al Qarara', 'مستشفى شهداء الاقصى', 'Bureij', 'جامعة الازهر كلية الحقوق المغراقة']",6.509999999999999,dijkstra,ok
+aid,مستشفي الخير,Islamic University - khanyonuis,"['مستشفي الخير', 'UNRWA vocational college', 'Al Qarara', 'Islamic University - khanyonuis']",4.599999999999999,dijkstra,ok
+aid,مدرسة الفاخورة,مستشفى شهداء الاقصى,,,,no path
+aid,مدرسة الفاخورة,Gaza field hospital of the Jordanian-,"['مدرسة الفاخورة', 'Gaza field hospital of the Jordanian-']",3.3199999999999994,dijkstra,ok
+aid,مدرسة الفاخورة,مستشفى الشفا - مبنى الحروق,"['مدرسة الفاخورة', 'مستشفى الشفا - مبنى الحروق']",3.1799999999999997,dijkstra,ok
+aid,مدرسة الفاخورة,UNRWA vocational college,,,,no path
+aid,مدرسة الفاخورة,UNRWA-GFO,,,,no path
+aid,مدرسة الفاخورة,Al Quds Open University - Gaza Branch,"['مدرسة الفاخورة', 'Al Quds Open University - Gaza Branch']",3.0699999999999994,dijkstra,ok
+aid,مدرسة الفاخورة,جامعة الازهر كلية الحقوق المغراقة,,,,no path
+aid,مدرسة الفاخورة,Islamic University - khanyonuis,,,,no path
