@@ -2,14 +2,15 @@
 <html>
 <head>
     <title>Safe Route Finder</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='SafePath_Logo.png') }}">
 </head>
 
 <body>
 
 <div class="container">
-
-    <h1>🟢 Gaza Safe Path Recommender</h1>
+    <img src="{{ url_for('static', filename='SafePath_Logo.png') }}" alt="Logo" class="logo">
+    <h1>Gaza Safe Path Recommender</h1>
 
     <label>Your Location:</label>
     <select id="locationSelect"></select>
@@ -28,6 +29,6 @@
 
 </div>
 
-<script src="/static/script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
