@@ -139,3 +139,14 @@ hr {
     background: #007A3D; /* green separator */
     margin: 15px 0;
 }
+
+/* Logo styling */
+.logo {
+    display: block;
+    margin: 0 auto 20px auto; /* center horizontally with some margin below */
+    width: 80px;  /* adjust size */
+    height: 80px;
+    border-radius: 50%; /* ensures it stays circular */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
