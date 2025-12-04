@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     background: #f3f3f3;
+    background-image: url("../images/palestine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container {
