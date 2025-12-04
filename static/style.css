@@ -3,7 +3,7 @@
 /* ======================== */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url("../images/palestine.jpg");
+    background-image: url("images/palestine.jpg"); /* make sure the path is correct */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -20,25 +20,26 @@ body::before {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.4); /* slightly dark overlay */
     z-index: -1;
 }
 
 /* ======================== */
-/* CONTAINER / CARD STYLING */
+/* CONTAINER STYLING */
 /* ======================== */
 .container {
     width: 50%;
     margin: 60px auto;
-    background: rgba(255,255,255,0.95); /* semi-transparent white */
+    background: rgba(0, 0, 0, 0.85); /* dark semi-transparent container */
+    color: #fff; /* text inside container is white */
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    border-top: 5px solid #007A3D; /* green top border for Palestine theme */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    border-top: 6px solid #007A3D; /* green top border */
 }
 
 /* ======================== */
-/* FORM ELEMENTS */
+/* FORM ELEMENTS STYLING */
 /* ======================== */
 select, button {
     width: 100%;
@@ -48,6 +49,20 @@ select, button {
     border-radius: 8px;
     border: 1px solid #bbb;
     font-size: 16px;
+    font-weight: bold;
+}
+
+/* SELECT DROPDOWN COLORS */
+select {
+    background: #fff;
+    color: #000;
+    border: 2px solid #007A3D; /* green border */
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #D71A28; /* red focus */
 }
 
 /* ======================== */
@@ -59,11 +74,13 @@ button {
     border: none;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background: #9E141F; /* darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 /* ======================== */
@@ -74,18 +91,18 @@ button:hover {
 }
 
 .card {
-    background: rgba(0,0,0,0.8); /* dark semi-transparent card */
-    color: white;
+    background: rgba(255, 255, 255, 0.95); /* light card for readability */
+    color: #000; /* dark text on light card */
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 15px;
-    border-left: 5px solid #007A3D; /* green accent */
+    border-left: 6px solid #007A3D; /* green accent */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .card h3 {
@@ -105,4 +122,20 @@ button:hover {
         width: 90%;
         padding: 20px;
     }
+}
+
+/* ======================== */
+/* OPTIONAL EXTRA STYLING */
+/* ======================== */
+h1, h2 {
+    color: #fff; /* white headings for visibility on dark overlay */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #007A3D; /* green separator */
+    margin: 15px 0;
 }
