@@ -1,137 +1,195 @@
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
-import networkx as nx
 
 app = Flask(__name__)
 
 # =========================================================
-# 1. LOAD NODES (AUTO-DETECT COLUMNS)
+# 1. LOAD NODES
 # =========================================================
 nodes_df = pd.read_csv("nodes.csv")
 nodes_df.columns = nodes_df.columns.str.strip()
 
-# Auto-detect name column
-name_candidates = ["Name", "name", "Node", "node", "Label", "label"]
-name_col = next((c for c in name_candidates if c in nodes_df.columns), None)
-if not name_col:
-    raise ValueError("ERROR: Could not find a node NAME column in nodes.csv")
+nodes_df["Name"] = nodes_df["Name"].astype(str).str.strip()
+nodes_df["Type"] = nodes_df["Type"].astype(str).str.lower().str.strip()
 
-# Auto-detect type column
-type_candidates = ["Type", "type", "Category", "category"]
-type_col = next((c for c in type_candidates if c in nodes_df.columns), None)
-if not type_col:
-    raise ValueError("ERROR: Could not find a node TYPE column in nodes.csv")
+civilian_nodes = nodes_df[nodes_df["Type"] == "civilians"]["Name"].tolist()
+destination_nodes = nodes_df[nodes_df["Type"] == "destination"]["Name"].tolist()
 
-# Clean fields
-nodes_df[name_col] = nodes_df[name_col].astype(str).str.strip()
-nodes_df[type_col] = nodes_df[type_col].astype(str).str.lower().str.strip()
-
-# Lists for frontend
-civilian_nodes = nodes_df[nodes_df[type_col] == "civilians"][name_col].tolist()
-destination_nodes = nodes_df[nodes_df[type_col] == "destination"][name_col].tolist()
+print("Loaded civilians:", civilian_nodes)
+print("Loaded destinations:", destination_nodes)
 
 # =========================================================
-# 2. LOAD EDGES
+# 2. LOAD & CLEAN EDGES
 # =========================================================
 edges_df = pd.read_csv("edges.csv")
-edges_df = edges_df.loc[:, ~edges_df.columns.str.contains("Unnamed")]
+edges_df = edges_df.loc[:, ~edges_df.columns.str.contains("^unnamed", case=False, regex=True)]
+edges_df.columns = edges_df.columns.str.strip().str.lower()
 
-weight_cols = [
-    "Humanitarian Scenario Weights",
-    "Distance Scenario Weights",
-    "Danger Scenario Weights"
-]
+# Map scenario weights
+from_col = "from" if "from" in edges_df.columns else None
+to_col = "to" if "to" in edges_df.columns else None
+risk_col = aid_col = dist_col = None
+for c in edges_df.columns:
+    if "danger scenario weights" in c:
+        risk_col = c
+    if "humanitarian scenario weights" in c:
+        aid_col = c
+    if "distance scenario weights" in c:
+        dist_col = c
 
-for col in weight_cols:
-    if col not in edges_df.columns:
-        raise ValueError(f"Missing edge column: {col}")
-    edges_df[col] = pd.to_numeric(edges_df[col], errors="coerce").fillna(0)
+if not from_col or not to_col or not risk_col or not aid_col or not dist_col:
+    raise ValueError(f"❌ edges.csv missing required columns. Found columns: {edges_df.columns.tolist()}")
 
-edges_df["From"] = edges_df["From"].astype(str).str.strip()
-edges_df["To"] = edges_df["To"].astype(str).str.strip()
+edges_df = edges_df.rename(columns={
+    from_col: "from",
+    to_col: "to",
+    risk_col: "risk",
+    aid_col: "aid",
+    dist_col: "dist"
+})
+
+for col in ["risk", "aid", "dist"]:
+    edges_df[col] = pd.to_numeric(edges_df[col], errors="coerce")
+
+edges_df["from"] = edges_df["from"].astype(str).str.strip()
+edges_df["to"]   = edges_df["to"].astype(str).str.strip()
+
+print("First 5 edges (standardized):")
+print(edges_df[["from", "to", "risk", "aid", "dist"]].head())
 
 # =========================================================
 # 3. BUILD GRAPH
 # =========================================================
-G = nx.DiGraph()
+GRAPH = {}
 for _, row in edges_df.iterrows():
-    u = row["From"]
-    v = row["To"]
-    G.add_edge(
-        u, v,
-        risk=row["Danger Scenario Weights"],
-        aid=row["Humanitarian Scenario Weights"],
-        dist=row["Distance Scenario Weights"]
-    )
-    G.add_edge(
-        v, u,
-        risk=row["Danger Scenario Weights"],
-        aid=row["Humanitarian Scenario Weights"],
-        dist=row["Distance Scenario Weights"]
-    )
+    u = row["from"]
+    v = row["to"]
+    if u not in GRAPH:
+        GRAPH[u] = {}
+    GRAPH[u][v] = {
+        "risk": row["risk"],
+        "aid": row["aid"],
+        "dist": row["dist"],
+    }
+
+print("Graph has", len(GRAPH), "origin nodes")
 
 # =========================================================
-# 4. CHOOSE ALGORITHM PER SOURCE COMPONENT
+# 4. DIJKSTRA
 # =========================================================
-def choose_algorithm_for_source(src, weight_type):
-    # Find the weakly connected component containing the source
-    for component in nx.weakly_connected_components(G):
-        if src in component:
-            subgraph = G.subgraph(component)
+def custom_dijkstra(source, weight_type, absorb_at_dest=True):
+    V = set(GRAPH.keys())
+    for u in GRAPH:
+        for v in GRAPH[u]:
+            V.add(v)
+    lam = {node: float("inf") for node in V}
+    lam[source] = 0.0
+    pred = {}
+    visited = set()
+
+    while len(visited) < len(V):
+        current = None
+        best_val = float("inf")
+        for n in V:
+            if n not in visited and lam[n] < best_val:
+                current = n
+                best_val = lam[n]
+        if current is None:
             break
-    else:
-        raise ValueError(f"Source node '{src}' is not in any connected component.")
+        visited.add(current)
 
-    # If any edge has negative weight, use Bellman-Ford
-    values = [d[weight_type] for _, _, d in subgraph.edges(data=True)]
-    algorithm = "bellman-ford" if min(values) < 0 else "dijkstra"
-    return algorithm, subgraph
-
-# =========================================================
-# 5. COMPUTE BEST PATHS
-# =========================================================
-def compute_paths_from_source(src, weight_type):
-    try:
-        algorithm, subgraph = choose_algorithm_for_source(src, weight_type)
-    except ValueError:
-        return []
-
-    # Filter out other civilian nodes from the subgraph (only intersections and destinations as intermediates)
-    allowed_nodes = set(destination_nodes + [src])  # source + all destinations
-    for node in subgraph.nodes():
-        if node not in allowed_nodes and node in civilian_nodes:
-            subgraph = subgraph.copy()
-            subgraph.remove_node(node)
-
-    reachable_destinations = [dst for dst in destination_nodes if dst in subgraph]
-    if not reachable_destinations:
-        return []
-
-    results = []
-    for dst in reachable_destinations:
-        try:
-            if algorithm == "dijkstra":
-                path = nx.dijkstra_path(subgraph, src, dst, weight=weight_type)
-                cost = nx.dijkstra_path_length(subgraph, src, dst, weight=weight_type)
-            else:
-                path = nx.bellman_ford_path(subgraph, src, dst, weight=weight_type)
-                cost = nx.bellman_ford_path_length(subgraph, src, dst, weight=weight_type)
-
-            results.append({
-                "destination": dst,
-                "path": path,
-                "cost": float(cost),
-                "algorithm": algorithm
-            })
-        except nx.NetworkXNoPath:
+        if absorb_at_dest and current in destination_nodes:
             continue
 
-    results.sort(key=lambda x: x["cost"])
-    return results[:3]
-
+        for neigh in GRAPH.get(current, {}):
+            w = GRAPH[current][neigh][weight_type]
+            new_cost = lam[current] + w
+            if new_cost < lam[neigh]:
+                lam[neigh] = new_cost
+                pred[neigh] = current
+    return lam, pred
 
 # =========================================================
-# 6. API ROUTES
+# 5. BELLMAN-FORD
+# =========================================================
+def custom_bellman_ford(source, weight_type, absorb_at_dest=True):
+    V = set(GRAPH.keys())
+    for u in GRAPH:
+        for v in GRAPH[u]:
+            V.add(v)
+    lam = {node: float("inf") for node in V}
+    lam[source] = 0.0
+    pred = {}
+
+    edges = []
+    for u in GRAPH:
+        if absorb_at_dest and u in destination_nodes:
+            continue
+        for v in GRAPH[u]:
+            edges.append((u, v))
+
+    for _ in range(len(V)-1):
+        updated = False
+        for u, v in edges:
+            w = GRAPH[u][v][weight_type]
+            if lam[u] + w < lam[v]:
+                lam[v] = lam[u] + w
+                pred[v] = u
+                updated = True
+        if not updated:
+            break
+    return lam, pred
+
+# =========================================================
+# 6. RECONSTRUCT PATH
+# =========================================================
+def reconstruct_path(pred, target):
+    path = [target]
+    while target in pred:
+        target = pred[target]
+        path.append(target)
+    return list(reversed(path))
+
+# =========================================================
+# 7. COMPUTE TOP-3 DESTINATIONS
+# =========================================================
+def compute_best_three(source, scenario):
+    if not GRAPH:
+        return []
+
+    # Determine reachable edges weights for this scenario
+    reachable_edges = [(u, v, GRAPH[u][v][scenario]) for u in GRAPH for v in GRAPH[u] if u == source or u in GRAPH]
+    edge_weights = [w for u,v,w in reachable_edges]
+
+    # Choose algorithm dynamically
+    use_bellman = any(w < 0 for w in edge_weights)
+    absorb = True if scenario != "distance" else False  # distance scenario should not absorb at destination
+
+    if use_bellman:
+        lam, pred = custom_bellman_ford(source, scenario, absorb_at_dest=absorb)
+        algo = "Bellman-Ford"
+    else:
+        lam, pred = custom_dijkstra(source, scenario, absorb_at_dest=absorb)
+        algo = "Dijkstra"
+
+    results = []
+    for dest in destination_nodes:
+        if dest in lam and lam[dest] < float("inf"):
+            results.append({
+                "destination": dest,
+                "cost": float(lam[dest]),
+                "path": reconstruct_path(pred, dest),
+                "algorithm": algo,
+                "fallback": False
+            })
+
+    # Sort by cost
+    results.sort(key=lambda x: x["cost"])
+
+    return results[:3]
+
+# =========================================================
+# 8. FLASK ENDPOINTS
 # =========================================================
 @app.route("/")
 def home():
@@ -141,28 +199,25 @@ def home():
 def get_nodes():
     return jsonify(civilian_nodes)
 
-@app.route("/compute", methods=["POST"])
-def compute():
-    data = request.json
+@app.route("/compute_best_paths", methods=["POST"])
+def compute_best_paths():
+    data = request.get_json() or {}
     src = data.get("source")
     scenario = data.get("scenario")
 
-    weight_map = {"risk": "risk", "aid": "aid", "distance": "dist"}
-    if scenario not in weight_map:
-        return jsonify({"error": "Invalid scenario selected"}), 400
+    if src not in civilian_nodes:
+        return jsonify({"error": f"Unknown source '{src}'"}), 400
+    if scenario not in {"risk", "aid", "distance", "dist"}:
+        return jsonify({"error": "Scenario must be one of: 'risk', 'aid', 'distance'"}), 400
 
-    weight_type = weight_map[scenario]
-    results = compute_paths_from_source(src, weight_type)
-
-    if not results:
-        return jsonify({"error": "No reachable destinations from this source for the selected scenario."})
-
-    return jsonify(results)
-
+    scenario = "dist" if scenario == "distance" else scenario
+    result = compute_best_three(src, scenario)
+    if not result:
+        return jsonify({"error": "No reachable destination for this source under the given scenario."}), 200
+    return jsonify(result)
 
 # =========================================================
-# 7. RUN APP
+# 9. RUN SERVER
 # =========================================================
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True)
