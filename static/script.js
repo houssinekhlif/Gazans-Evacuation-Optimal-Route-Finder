@@ -17,7 +17,7 @@ function computePath() {
     let source = document.getElementById("locationSelect").value;
     let scenario = document.getElementById("scenarioSelect").value;
 
-    fetch("/compute", {
+    fetch("/compute_best_paths", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({source: source, scenario: scenario})
