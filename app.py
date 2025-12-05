@@ -158,11 +158,30 @@ def compute_best_three(source, scenario):
     if not GRAPH:
         return []
 
-    # Determine reachable edges weights for this scenario
-    reachable_edges = [(u, v, GRAPH[u][v][scenario]) for u in GRAPH for v in GRAPH[u] if u == source or u in GRAPH]
-    edge_weights = [w for u,v,w in reachable_edges]
+    # --------------------------------------------------
+    # 1. Determine reachable nodes from this source
+    # --------------------------------------------------
+    reachable = set([source])
+    frontier = [source]
+    while frontier:
+        u = frontier.pop()
+        for v in GRAPH.get(u, {}):
+            if v not in reachable:
+                reachable.add(v)
+                frontier.append(v)
 
-    # Choose algorithm dynamically
+    # --------------------------------------------------
+    # 2. Gather reachable edge weights for this scenario
+    # --------------------------------------------------
+    edge_weights = []
+    for u in reachable:
+        for v in GRAPH.get(u, {}):
+            if v in reachable:
+                edge_weights.append(GRAPH[u][v][scenario])
+
+    # --------------------------------------------------
+    # 3. Choose algorithm dynamically
+    # --------------------------------------------------
     use_bellman = any(w < 0 for w in edge_weights)
     absorb = True if scenario != "distance" else False  # distance scenario should not absorb at destination
 
@@ -173,6 +192,9 @@ def compute_best_three(source, scenario):
         lam, pred = custom_dijkstra(source, scenario, absorb_at_dest=absorb)
         algo = "Dijkstra"
 
+    # --------------------------------------------------
+    # 4. Collect top 3 destinations
+    # --------------------------------------------------
     results = []
     for dest in destination_nodes:
         if dest in lam and lam[dest] < float("inf"):
@@ -184,10 +206,9 @@ def compute_best_three(source, scenario):
                 "fallback": False
             })
 
-    # Sort by cost
     results.sort(key=lambda x: x["cost"])
-
     return results[:3]
+
 
 # =========================================================
 # 8. FLASK ENDPOINTS
