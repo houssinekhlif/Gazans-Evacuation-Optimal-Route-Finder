@@ -1,80 +1,80 @@
 From,To,Distance_m,Edge risk,edge humanitarian aid,Humanitarian Scenario Weights,Distance Scenario Weights,Danger Scenario Weights
-Beit Hanoun,gaza city int,2.99674,8.125,0.5,0.52,0.23,0.08
-Beit Lahia,gaza city int,0.42542,8.125,0.5,0.47,0.08,0.03
-Jabalia,Rafah int,1.78456,9.25,0.5,0.62,0.19,0.08
-Atatra,gaza city int,2.2777,8.375,0.5,0.54,0.2,0.07
-Al-Shati,Rafah int,1.97734,9.25,0.5,0.62,0.2,0.09
-Rimal,Rafah int,1.24259,10,0.5,0.69,0.17,0.09
-Tuffah neighborhood park,Rafah int,1.58141,9,0.5,0.59,0.17,0.07
-Shuja'iyya,Rafah int,2.40218,9.5,0,0.68,0.25,0.18
-Zeitoun,Rafah int,1.37575,9,0.5,0.59,0.16,0.07
-Sabra,Rafah int,1.62586,9.5,0.5,0.64,0.18,0.09
-Sheikh Radwan,Rafah int,1.61582,9.25,0.5,0.62,0.18,0.08
-Nuseirat,north gaza int,2.66074,6,2,0.21,0.09,-0.2
-Bureij,north gaza int,2.42447,5.75,2,0.18,0.07,-0.21
-Maghazi,north gaza int,0.96151,5.25,2,0.1,-0.03,-0.25
-Az Zawayda,north gaza int,0.8474,5.5,2,0.12,-0.03,-0.25
-Deir al Balah,north gaza int,3.01952,5.75,2,0.19,0.1,-0.2
-Al Musaddar,north gaza int,1.49976,5.5,2,0.14,0.01,-0.23
-Abasan al-Kabira,middle camps int,0.80036,7.5,1.5,0.36,0.04,-0.13
-Abasan al-Saghira,middle camps int,1.24127,8,1.5,0.43,0.08,-0.11
-Bani Suheila,middle camps int,2.01172,8,1.5,0.44,0.12,-0.09
-Khuza'a,middle camps int,3.12325,8.5,2.5,0.47,0.15,-0.21
-Al Qarara,middle camps int,4.65055,7.75,1.5,0.46,0.27,-0.04
-Al Fukhkhari,middle camps int,3.90558,7,2.5,0.32,0.16,-0.23
-Rafah Camp,khan younes int,3.55696,9.5,2.5,0.58,0.2,-0.18
-Tal as Sultan,khan younes int,1.83224,9.25,2.5,0.52,0.09,-0.21
-Al Khair Hospital,khan younes int,4.75958,9,1.5,0.6,0.31,-0.01
-Al-Fakhoura School,gaza city int,1.29891,8.125,0.5,0.49,0.13,0.05
-Beit Hanoun,Al Quds Open University - Gaza Branch,9.41795,6.25,1,0.42,0.54,0.09
-Beit Lahia,Al Quds Open University - Gaza Branch,6.89038,6.25,1,0.37,0.39,0.04
-Jabalia,Al Quds Open University - Gaza Branch,3.10449,6.25,1,0.3,0.17,-0.03
-Atatra,Al Shifa Hospital  Burns Building,6.11815,6,1,0.33,0.34,0.02
-Atatra,Al Quds Open University - Gaza Branch,4.89076,6.5,1,0.36,0.28,0.01
-Al-Shati,Al Shifa Hospital  Burns Building,1.84745,5.75,1,0.22,0.08,-0.07
-Al-Shati,Al Quds Open University - Gaza Branch,0.50573,6.25,1,0.25,0.02,-0.08
-Rimal,Gaza field hospital of the Jordanian-,3.68442,6,1,0.28,0.2,-0.03
-Rimal,Al Shifa Hospital  Burns Building,1.31076,6.5,1,0.29,0.07,-0.06
-Rimal,Al Quds Open University - Gaza Branch,0.49009,7,1,0.33,0.03,-0.07
-Tuffah neighborhood park,Al Shifa Hospital  Burns Building,3.88167,5.5,1,0.23,0.2,-0.04
-Tuffah neighborhood park,Al Quds Open University - Gaza Branch,3.53134,6,1,0.28,0.19,-0.03
-Shuja'iyya,Gaza field hospital of the Jordanian-,3.88524,5.5,0.5,0.26,0.22,0.04
-Shuja'iyya,Al Shifa Hospital  Burns Building,3.75642,6,0.5,0.31,0.23,0.05
-Zeitoun,Gaza field hospital of the Jordanian-,2.04721,5,1,0.14,0.08,-0.08
-Zeitoun,Al Shifa Hospital  Burns Building,1.09513,5.5,1,0.18,0.04,-0.09
-Zeitoun,Al Quds Open University - Gaza Branch,2.52876,6,1,0.26,0.13,-0.05
-Sabra,Gaza field hospital of the Jordanian-,2.1237,5.5,1,0.2,0.1,-0.07
-Sabra,Al Shifa Hospital  Burns Building,2.43237,6,1,0.26,0.12,-0.05
-Sabra,Al Quds Open University - Gaza Branch,3.72629,6.5,1,0.34,0.21,-0.02
-Sheikh Radwan,Al Shifa Hospital  Burns Building,2.69735,5.75,1,0.24,0.13,-0.05
-Sheikh Radwan,Al Quds Open University - Gaza Branch,1.47571,6.25,1,0.27,0.07,-0.07
-Nuseirat,UNRWA-GFO,3.42677,5,3,0.07,0.06,-0.36
-Bureij,Al Aqsa Martyrs Hospital,5.92109,4,4,-0.04,0.13,-0.48
-Bureij,UNRWA-GFO,5.01206,4.75,3,0.07,0.15,-0.33
-Bureij,Al Azhar University  Faculty of Law,5.94899,4.75,3,0.09,0.2,-0.31
-Maghazi,Al Aqsa Martyrs Hospital,3.5258,3.5,4,-0.14,-0.02,-0.54
-Az Zawayda,Al Aqsa Martyrs Hospital,2.03385,3.75,4,-0.14,-0.1,-0.56
-Deir al Balah,Al Aqsa Martyrs Hospital,1.01595,4,4,-0.13,-0.15,-0.58
-Al Musaddar,Al Aqsa Martyrs Hospital,2.72643,3.75,4,-0.13,-0.06,-0.55
-Abasan al-Kabira,Islamic University - khanyonuis,2.99373,6,3,0.17,0.06,-0.34
-Abasan al-Saghira,Islamic University - khanyonuis,3.87304,6.5,3,0.24,0.12,-0.31
-Bani Suheila,Islamic University - khanyonuis,2.34807,6.5,3,0.21,0.03,-0.34
-Khuza'a,Islamic University - khanyonuis,5.18225,7,4,0.27,0.16,-0.43
-Al Qarara,Al Aqsa Martyrs Hospital,6.92658,5.25,3.5,0.14,0.25,-0.36
-Al Qarara,UNRWA vocational college,5.34568,5.75,3,0.19,0.19,-0.3
-Al Qarara,Islamic University - khanyonuis,6.29733,6.25,3,0.26,0.26,-0.27
-Al Fukhkhari,Islamic University - khanyonuis,4.26219,5.5,4,0.09,0.07,-0.48
-Rafah Camp,Islamic University - khanyonuis,10.69846,7,4,0.38,0.48,-0.32
-Tal as Sultan,UNRWA vocational college,9.84585,6.25,4,0.28,0.41,-0.35
-Al Khair Hospital,UNRWA vocational college,1.8849,6,3,0.15,-0.01,-0.36
-Al-Fakhoura School,Gaza field hospital of the Jordanian-,7.79078,5.25,1,0.28,0.42,0.03
-Al-Fakhoura School,Al Shifa Hospital  Burns Building,6.35806,5.75,1,0.31,0.35,0.02
-Al-Fakhoura School,Al Quds Open University - Gaza Branch,5.14073,6.25,1,0.34,0.29,0.01
-north gaza int,Al Aqsa Martyrs Hospital,2.78266,3.75,2,-0.03,0.04,-0.25
-gaza city int,Al Quds Open University - Gaza Branch,6.89259,5.875,0.5,0.36,0.41,0.11
-middle camps int,Islamic University - khanyonuis,2.43305,5.5,1.5,0.18,0.09,-0.14
-khan younes int,UNRWA vocational college,9.49901,6,1.5,0.37,0.51,0.01
-khan younes int,Islamic University - khanyonuis,9.10842,6.5,1.5,0.42,0.5,0.01
-Rafah int,Gaza field hospital of the Jordanian-,3.72036,6,0.5,0.31,0.23,0.05
-Rafah int,Al Shifa Hospital  Burns Building,2.32507,6.5,0.5,0.34,0.16,0.03
-Rafah int,Al Quds Open University - Gaza Branch,1.90046,7,0.5,0.38,0.14,0.03
+Beit Hanoun,gaza city int,2.99674,8.125,0.5,52,23,8
+Beit Lahia,gaza city int,0.42542,8.125,0.5,47,8,3
+Jabalia,Rafah int,1.78456,9.25,0.5,62,19,8
+Atatra,gaza city int,2.2777,8.375,0.5,54,20,7
+Al-Shati,Rafah int,1.97734,9.25,0.5,62,20,9
+Rimal,Rafah int,1.24259,10,0.5,69,17,9
+Tuffah neighborhood park,Rafah int,1.58141,9,0.5,59,17,7
+Shuja'iyya,Rafah int,2.40218,9.5,0,68,25,18
+Zeitoun,Rafah int,1.37575,9,0.5,59,16,7
+Sabra,Rafah int,1.62586,9.5,0.5,64,18,9
+Sheikh Radwan,Rafah int,1.61582,9.25,0.5,62,18,8
+Nuseirat,north gaza int,2.66074,6,2,21,9,-20
+Bureij,north gaza int,2.42447,5.75,2,18,7,-21
+Maghazi,north gaza int,0.96151,5.25,2,10,-3,-25
+Az Zawayda,north gaza int,0.8474,5.5,2,12,-3,-25
+Deir al Balah,north gaza int,3.01952,5.75,2,19,10,-20
+Al Musaddar,north gaza int,1.49976,5.5,2,14,1,-23
+Abasan al-Kabira,middle camps int,0.80036,7.5,1.5,36,4,-13
+Abasan al-Saghira,middle camps int,1.24127,8,1.5,43,8,-11
+Bani Suheila,middle camps int,2.01172,8,1.5,44,12,-9
+Khuza'a,middle camps int,3.12325,8.5,2.5,47,15,-21
+Al Qarara,middle camps int,4.65055,7.75,1.5,46,27,-4
+Al Fukhkhari,middle camps int,3.90558,7,2.5,32,16,-23
+Rafah Camp,khan younes int,3.55696,9.5,2.5,58,20,-18
+Tal as Sultan,khan younes int,1.83224,9.25,2.5,52,9,-21
+Al Khair Hospital,khan younes int,4.75958,9,1.5,60,31,-1
+Al-Fakhoura School,gaza city int,1.29891,8.125,0.5,49,13,5
+Beit Hanoun,Al Quds Open University - Gaza Branch,9.41795,6.25,1,42,54,9
+Beit Lahia,Al Quds Open University - Gaza Branch,6.89038,6.25,1,37,39,4
+Jabalia,Al Quds Open University - Gaza Branch,3.10449,6.25,1,30,17,-3
+Atatra,Al Shifa Hospital  Burns Building,6.11815,6,1,33,34,2
+Atatra,Al Quds Open University - Gaza Branch,4.89076,6.5,1,36,28,1
+Al-Shati,Al Shifa Hospital  Burns Building,1.84745,5.75,1,22,8,-7
+Al-Shati,Al Quds Open University - Gaza Branch,0.50573,6.25,1,25,2,-8
+Rimal,Gaza field hospital of the Jordanian-,3.68442,6,1,28,20,-3
+Rimal,Al Shifa Hospital  Burns Building,1.31076,6.5,1,29,7,-6
+Rimal,Al Quds Open University - Gaza Branch,0.49009,7,1,33,3,-7
+Tuffah neighborhood park,Al Shifa Hospital  Burns Building,3.88167,5.5,1,23,20,-4
+Tuffah neighborhood park,Al Quds Open University - Gaza Branch,3.53134,6,1,28,19,-3
+Shuja'iyya,Gaza field hospital of the Jordanian-,3.88524,5.5,0.5,26,22,4
+Shuja'iyya,Al Shifa Hospital  Burns Building,3.75642,6,0.5,31,23,5
+Zeitoun,Gaza field hospital of the Jordanian-,2.04721,5,1,14,8,-8
+Zeitoun,Al Shifa Hospital  Burns Building,1.09513,5.5,1,18,4,-9
+Zeitoun,Al Quds Open University - Gaza Branch,2.52876,6,1,26,13,-5
+Sabra,Gaza field hospital of the Jordanian-,2.1237,5.5,1,20,10,-7
+Sabra,Al Shifa Hospital  Burns Building,2.43237,6,1,26,12,-5
+Sabra,Al Quds Open University - Gaza Branch,3.72629,6.5,1,34,21,-2
+Sheikh Radwan,Al Shifa Hospital  Burns Building,2.69735,5.75,1,24,13,-5
+Sheikh Radwan,Al Quds Open University - Gaza Branch,1.47571,6.25,1,27,7,-7
+Nuseirat,UNRWA-GFO,3.42677,5,3,7,6,-36
+Bureij,Al Aqsa Martyrs Hospital,5.92109,4,4,-4,13,-48
+Bureij,UNRWA-GFO,5.01206,4.75,3,7,15,-33
+Bureij,Al Azhar University  Faculty of Law,5.94899,4.75,3,9,20,-31
+Maghazi,Al Aqsa Martyrs Hospital,3.5258,3.5,4,-14,-2,-54
+Az Zawayda,Al Aqsa Martyrs Hospital,2.03385,3.75,4,-14,-10,-56
+Deir al Balah,Al Aqsa Martyrs Hospital,1.01595,4,4,-13,-15,-58
+Al Musaddar,Al Aqsa Martyrs Hospital,2.72643,3.75,4,-13,-6,-55
+Abasan al-Kabira,Islamic University - khanyonuis,2.99373,6,3,17,6,-34
+Abasan al-Saghira,Islamic University - khanyonuis,3.87304,6.5,3,24,12,-31
+Bani Suheila,Islamic University - khanyonuis,2.34807,6.5,3,21,3,-34
+Khuza'a,Islamic University - khanyonuis,5.18225,7,4,27,16,-43
+Al Qarara,Al Aqsa Martyrs Hospital,6.92658,5.25,3.5,14,25,-36
+Al Qarara,UNRWA vocational college,5.34568,5.75,3,19,19,-30
+Al Qarara,Islamic University - khanyonuis,6.29733,6.25,3,26,26,-27
+Al Fukhkhari,Islamic University - khanyonuis,4.26219,5.5,4,9,7,-48
+Rafah Camp,Islamic University - khanyonuis,10.69846,7,4,38,48,-32
+Tal as Sultan,UNRWA vocational college,9.84585,6.25,4,28,41,-35
+Al Khair Hospital,UNRWA vocational college,1.8849,6,3,15,-1,-36
+Al-Fakhoura School,Gaza field hospital of the Jordanian-,7.79078,5.25,1,28,42,3
+Al-Fakhoura School,Al Shifa Hospital  Burns Building,6.35806,5.75,1,31,35,2
+Al-Fakhoura School,Al Quds Open University - Gaza Branch,5.14073,6.25,1,34,29,1
+north gaza int,Al Aqsa Martyrs Hospital,2.78266,3.75,2,-3,4,-25
+gaza city int,Al Quds Open University - Gaza Branch,6.89259,5.875,0.5,36,41,11
+middle camps int,Islamic University - khanyonuis,2.43305,5.5,1.5,18,9,-14
+khan younes int,UNRWA vocational college,9.49901,6,1.5,37,51,1
+khan younes int,Islamic University - khanyonuis,9.10842,6.5,1.5,42,50,1
+Rafah int,Gaza field hospital of the Jordanian-,3.72036,6,0.5,31,23,5
+Rafah int,Al Shifa Hospital  Burns Building,2.32507,6.5,0.5,34,16,3
+Rafah int,Al Quds Open University - Gaza Branch,1.90046,7,0.5,38,14,3
