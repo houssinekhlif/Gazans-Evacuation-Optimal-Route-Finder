@@ -16,9 +16,6 @@ nodes_df["Type"] = nodes_df["Type"].astype(str).str.lower().str.strip()
 civilian_nodes = nodes_df[nodes_df["Type"] == "civilians"]["Name"].tolist()
 destination_nodes = nodes_df[nodes_df["Type"] == "destination"]["Name"].tolist()
 
-print("Loaded civilians:", civilian_nodes)
-print("Loaded destinations:", destination_nodes)
-
 # =========================================================
 # 2. LOAD & CLEAN EDGES
 # =========================================================
@@ -55,9 +52,6 @@ for col in ["risk", "aid", "dist"]:
 edges_df["from"] = edges_df["from"].astype(str).str.strip()
 edges_df["to"]   = edges_df["to"].astype(str).str.strip()
 
-print("First 5 edges (standardized):")
-print(edges_df[["from", "to", "risk", "aid", "dist"]].head())
-
 # =========================================================
 # 3. BUILD GRAPH
 # =========================================================
@@ -73,7 +67,6 @@ for _, row in edges_df.iterrows():
         "dist": row["dist"],
     }
 
-print("Graph has", len(GRAPH), "origin nodes")
 
 # =========================================================
 # 4. DIJKSTRA
