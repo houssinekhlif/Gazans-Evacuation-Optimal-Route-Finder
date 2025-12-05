@@ -104,6 +104,10 @@ button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
+/* Active / clicked state */
+.card:active {
+    background-color: #d3d3d3;
+}
 
 .card h3 {
     margin: 0 0 10px 0;
@@ -149,4 +153,3 @@ hr {
     border-radius: 50%; /* ensures it stays circular */
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
