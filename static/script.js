@@ -31,12 +31,26 @@ function computePath() {
             div.innerHTML += `
                 <div class="card">
                     <h3>#${idx+1} → ${item.destination}</h3>
+                    <p><b>Path:</b> ${item.path.join(" → ")}</p>
                     <p><b>Algorithm:</b> ${item.algorithm}</p>
                     <p><b>Cost:</b> ${item.cost.toFixed(3)}</p>
-                    <p><b>Path:</b> ${item.path.join(" → ")}</p>
+                    
+
+                    <p><b>Total Distance:</b> 
+                        ${item.total_distance !== null ? item.total_distance.toFixed(2) + " km" : "N/A"}
+                    </p>
+
+                    <p><b>Risk Rating:</b> 
+                        ${item.avg_risk !== null ? item.avg_risk.toFixed(3) : "N/A"}
+                    </p>
+
+                    <p><b>Humanitarian Aid Rating:</b>
+                        ${item.avg_aid !== null ? item.avg_aid.toFixed(3) : "N/A"}
+                    </p>
                 </div>
                 <hr>
             `;
+
         })
     });
 }
