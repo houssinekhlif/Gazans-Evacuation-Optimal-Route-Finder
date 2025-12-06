@@ -57,3 +57,17 @@ function computePath() {
         })
     });
 }
+
+
+
+const qrButton = document.getElementById("qrButton");
+const qrCode = document.getElementById("qrCode");
+
+qrButton.addEventListener("click", () => {
+    if (qrCode.style.display === "none" || qrCode.style.display === "") {
+        qrCode.style.display = "block";
+    } else {
+        qrCode.style.display = "none";
+    }
+});
+
