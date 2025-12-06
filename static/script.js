@@ -2,6 +2,9 @@
 fetch("/get_nodes")
     .then(res => res.json())
     .then(nodes => {
+        // Sort alphabetically
+        nodes.sort((a, b) => a.localeCompare(b));
+
         let select = document.getElementById("locationSelect");
         nodes.forEach(n => {
             let opt = document.createElement("option");
