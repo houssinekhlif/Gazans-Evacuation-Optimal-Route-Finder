@@ -16,6 +16,9 @@ nodes_df["Type"] = nodes_df["Type"].astype(str).str.lower().str.strip()
 civilian_nodes = nodes_df[nodes_df["Type"] == "civilians"]["Name"].tolist()
 destination_nodes = nodes_df[nodes_df["Type"] == "destination"]["Name"].tolist()
 
+# print("Loaded civilians:", civilian_nodes)
+# print("Loaded destinations:", destination_nodes)
+
 # =========================================================
 # 2. LOAD & CLEAN EDGES
 # =========================================================
@@ -52,6 +55,9 @@ for col in ["risk", "aid", "dist"]:
 edges_df["from"] = edges_df["from"].astype(str).str.strip()
 edges_df["to"]   = edges_df["to"].astype(str).str.strip()
 
+# print("First 5 edges (standardized):")
+# print(edges_df[["from", "to", "risk", "aid", "dist"]].head())
+
 # =========================================================
 # 3. BUILD GRAPH
 # =========================================================
@@ -65,8 +71,13 @@ for _, row in edges_df.iterrows():
         "risk": row["risk"],
         "aid": row["aid"],
         "dist": row["dist"],
+        # === REAL METADATA VALUES ===
+        "distance_m": row.get("distance_m"),
+        "risk_meta": row.get("edge risk"),
+        "aid_meta": row.get("edge humanitarian aid"),
     }
 
+# print("Graph has", len(GRAPH), "origin nodes")
 
 # =========================================================
 # 4. DIJKSTRA
@@ -144,6 +155,46 @@ def reconstruct_path(pred, target):
         path.append(target)
     return list(reversed(path))
 
+
+def compute_path_metadata(path):
+    total_distance = 0
+    risk_vals = []
+    aid_vals = []
+
+    for i in range(len(path)-1):
+        u = path[i]
+        v = path[i+1]
+        edge = GRAPH[u][v]
+
+        # convert to float safely
+        dist = edge.get("distance_m") or edge.get("Distance_m")
+        risk_meta = edge.get("risk_meta") or edge.get("Edge risk")
+        aid_meta = edge.get("aid_meta") or edge.get("edge humanitarian aid")
+
+        if dist is not None:
+            try:
+                total_distance += float(dist)
+            except:
+                pass
+
+        if risk_meta is not None:
+            try:
+                risk_vals.append(float(risk_meta))
+            except:
+                pass
+
+        if aid_meta is not None:
+            try:
+                aid_vals.append(float(aid_meta))
+            except:
+                pass
+
+    avg_risk = sum(risk_vals)/len(risk_vals) if risk_vals else None
+    avg_aid  = sum(aid_vals)/len(aid_vals) if aid_vals else None
+
+    return total_distance, avg_risk, avg_aid
+
+
 # =========================================================
 # 7. COMPUTE TOP-3 DESTINATIONS
 # =========================================================
@@ -176,7 +227,7 @@ def compute_best_three(source, scenario):
     # 3. Choose algorithm dynamically
     # --------------------------------------------------
     use_bellman = any(w < 0 for w in edge_weights)
-    absorb = True if scenario != "distance" else False  # distance scenario should not absorb at destination
+    absorb = True if scenario != "distance" else False
 
     if use_bellman:
         lam, pred = custom_bellman_ford(source, scenario, absorb_at_dest=absorb)
@@ -186,21 +237,35 @@ def compute_best_three(source, scenario):
         algo = "Dijkstra"
 
     # --------------------------------------------------
-    # 4. Collect top 3 destinations
+    # 4. Collect top 3 destinations WITH METADATA
     # --------------------------------------------------
     results = []
     for dest in destination_nodes:
         if dest in lam and lam[dest] < float("inf"):
+
+            # 1. Reconstruct path
+            path = reconstruct_path(pred, dest)
+
+            # 2. Compute metadata for this path
+            total_distance, avg_risk, avg_aid = compute_path_metadata(path)
+
+            # 3. Add to results
             results.append({
                 "destination": dest,
                 "cost": float(lam[dest]),
-                "path": reconstruct_path(pred, dest),
+                "path": path,
                 "algorithm": algo,
-                "fallback": False
+                "fallback": False,
+
+                # === NEW METADATA FIELDS ===
+                "total_distance": total_distance,
+                "avg_risk": avg_risk,
+                "avg_aid": avg_aid
             })
 
     results.sort(key=lambda x: x["cost"])
     return results[:3]
+
 
 
 # =========================================================
